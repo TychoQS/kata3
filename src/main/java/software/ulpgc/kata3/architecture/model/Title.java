@@ -1,14 +1,16 @@
-package software.ulpgc.kata3;
+package software.ulpgc.kata3.architecture.model;
 
 public class Title {
     private final String title;
     private final int year;
     private final int duration;
+    private final TitleType titleType;
 
-    public Title(String title, int year, int duration) {
+    public Title(String title, int year, int duration, TitleType titleType) {
         this.title = title;
         this.year = year;
         this.duration = duration;
+        this.titleType = titleType;
     }
 
     @Override
@@ -17,6 +19,7 @@ public class Title {
                 "title='" + title + '\'' +
                 ", year=" + year +
                 ", duration=" + duration +
+                ", titleType=" + titleType +
                 '}';
     }
 
@@ -30,5 +33,23 @@ public class Title {
 
     public int getDuration() {
         return duration;
+    }
+
+    public TitleType getTitleType() {
+        return titleType;
+    }
+
+    public enum TitleType {
+        VIDEOGAME,
+        TVPILOT,
+        MOVIE,
+        TVSERIES,
+        TVMINISERIES,
+        SHORT,
+        TVSPECIAL,
+        TVSHORT,
+        VIDEO,
+        TVMOVIE,
+        TVEPISODE
     }
 }

@@ -1,11 +1,11 @@
-package software.ulpgc.kata3;
+package software.ulpgc.kata3.architecture.model;
 
-public class HistogramElement {
+public class BarchartElement {
     private final String field;
     private final int value;
 
-    public HistogramElement(int field, int value) {
-        this.field = String.valueOf(field);
+    public BarchartElement(String field, int value) {
+        this.field = field;
         this.value = value;
     }
 
